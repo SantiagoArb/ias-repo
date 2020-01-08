@@ -73,4 +73,12 @@ public class diagnostico {
 		this.febaja = febaja;
 	}
 
+	@Override
+	public String toString() {
+		return "diagnostico [cddiagnostico=" + cddiagnostico + ", dniempresa=" + dniempresa + ", dsdiagnostico="
+				+ dsdiagnostico + ", cdusuario=" + cdusuario + ", fealta=" + fealta + ", febaja=" + febaja + "]";
+	}
+
+	
+	
 }
