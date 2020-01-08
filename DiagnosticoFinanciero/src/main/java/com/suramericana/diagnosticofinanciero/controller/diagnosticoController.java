@@ -3,6 +3,8 @@ package com.suramericana.diagnosticofinanciero.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,6 +14,7 @@ import com.suramericana.diagnosticofinanciero.dto.diagnostico;
 import com.suramericana.diagnosticofinanciero.service.diagnosticoService;
 
 @RestController
+@RequestMapping(value="/diagnostico")
 public class diagnosticoController {
 	
 	public final diagnosticoService diag_service = new diagnosticoService();
@@ -21,8 +24,8 @@ public class diagnosticoController {
 	/*Recibe en el Body content type de tipo aplication/json  un json 
 	 * {"cddiagnostico":"1","dniempresa":"2313","dsdiagnostico":"diagnostico 1","cdusuario":"125656","fealta":"","febaja":""}
 	 * */
-	@RequestMapping(value="/creardiagnostico")
-	public diagnostico getDiagnosticos(@RequestBody diagnostico diagDto) {
+	@PostMapping(value="/creardiagnostico")
+	public diagnostico crearDiagnosticos(@RequestBody diagnostico diagDto) {
 		diagnostico resp = this.diag_service.crearDiagnostico(diagDto);
 		System.out.println(resp.toString());
 		return resp;
@@ -30,7 +33,7 @@ public class diagnosticoController {
 	
 	
 	
-	@RequestMapping(value="/getdiagnosticos")
+	@GetMapping(value="/getdiagnosticos")
 	public List<diagnostico> obtenerDiagnosticos(@RequestParam(value="cdempresa") String cdempresa) {
 		
 		List<diagnostico> diagnosticos = this.diag_service.obtenerDiagnosticos(cdempresa);
