@@ -18,10 +18,10 @@ public class diagnosticoService {
 		
 		ArrayList<diagnostico> diagnosticos = new ArrayList<diagnostico>();
 		
-		diagnosticos.add(new diagnostico(1,"2313","diagnostico 1","", new Date(),new Date()));
-		diagnosticos.add(new diagnostico(2,"2313","diagnostico 2","", new Date(),new Date()));
-		diagnosticos.add(new diagnostico(3,"2314","diagnostico 3","", new Date(),new Date()));
-		diagnosticos.add(new diagnostico(4,"2314","diagnostico 4","", new Date(),new Date()));
+		diagnosticos.add(new diagnostico(1,"2313","diagnostico 1","111", new Date(),new Date()));
+		diagnosticos.add(new diagnostico(2,"2313","diagnostico 2","111", new Date(),new Date()));
+		diagnosticos.add(new diagnostico(3,"2314","diagnostico 3","222", new Date(),new Date()));
+		diagnosticos.add(new diagnostico(4,"2314","diagnostico 4","222", new Date(),new Date()));
 		
 		List<diagnostico> respuesta = diagnosticos.stream()
 										.filter(diagno -> cdempresa.equalsIgnoreCase(diagno.getDniempresa()))
