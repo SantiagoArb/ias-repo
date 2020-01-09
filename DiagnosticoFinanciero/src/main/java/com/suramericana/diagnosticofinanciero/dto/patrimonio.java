@@ -13,7 +13,6 @@ public class patrimonio {
 	private valorPositivo ptResultadoEjerciciosAnteriores;
 	private valorPositivo ptResultadoDelEjercicio;
 	
-	
 	public patrimonio() {
 			
 	}
@@ -30,6 +29,7 @@ public class patrimonio {
 		this.ptSuperavitPorValorizacion = ptSuperavitPorValorizacion;
 		this.ptResultadoEjerciciosAnteriores = ptResultadoEjerciciosAnteriores;
 		this.ptResultadoDelEjercicio = ptResultadoDelEjercicio;
+		
 	}
 	
 	
